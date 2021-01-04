@@ -26,7 +26,7 @@
                     <div class="cake_feature_item">
                         <a href="{{ route('product-detail',$result->id) }}">
                             <div class="cake_img">
-                                <img src="{{ $results->getImage() }}" alt="">
+                                <img src="{{ $result->getImage() }}" alt="">
                             </div>
                         </a>
                         <div class="cake_text">

@@ -60,7 +60,7 @@
                                         <td>{{ $product->quantity }}</td>
                                         <td>{{ number_format($product->costPrice) }}đ</td>
                                         <td>{{ number_format($product->price) }}đ</td>
-                                        <td><
+                                        <td>
                                             <a href="{{route('product.edit',$product->id)}}">
                                                 <button type="button" class="btn btn-success" >
                                                     Sửa

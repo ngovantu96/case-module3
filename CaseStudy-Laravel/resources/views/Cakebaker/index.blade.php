@@ -145,7 +145,7 @@
                         <div class="cake_feature_item">
                            <a href="{{ route('product-detail',$productNew->id) }}">
                                <div class="cake_img">
-                                   <img src="{{$productNews->getImage()}}" alt="" width="253px" height="200px">
+                                   <img src="{{$productNew->getImage()}}" alt="" width="253px" height="200px">
                                </div>
                            </a>
                             <div class="cake_text">
