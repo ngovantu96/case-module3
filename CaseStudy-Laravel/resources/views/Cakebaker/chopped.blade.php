@@ -24,7 +24,7 @@
                         <div class="cake_feature_item">
                                 <a href="{{ route('product-detail',$cakeCopped->id) }}">
                                     <div class="cake_img">
-                                        <img src="{{ asset('storage/'.substr($cakeCopped->image_product,7)) }}" alt="" width="255px" height="200px">
+                                        <img src="{{ $cakeCopped->getImage()}}" alt="" width="255px" height="200px">
                                     </div>
                                 </a>
                             <div class="cake_text">

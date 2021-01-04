@@ -56,14 +56,11 @@
                                         <td>{{ ++$key }}</td>
                                         <td>{{ $product->name }}</td>
                                         <td>{{ $product->category->name }}</td>
-                                        <td><img src="{{ asset('storage/'.substr($product->image_product,7))}}" alt="" width="100px" height="150px"></td>
+                                        <td><img src="{{$product->getImage()}}" alt="" width="100px" height="150px"></td>
                                         <td>{{ $product->quantity }}</td>
                                         <td>{{ number_format($product->costPrice) }}đ</td>
                                         <td>{{ number_format($product->price) }}đ</td>
-                                        <td><a href="{{route('product.edit',$product->id)}}">
-                                                <button type="button" class="btn btn-primary" >
-                                                    Chi Tiết
-                                                </button></a>
+                                        <td><
                                             <a href="{{route('product.edit',$product->id)}}">
                                                 <button type="button" class="btn btn-success" >
                                                     Sửa

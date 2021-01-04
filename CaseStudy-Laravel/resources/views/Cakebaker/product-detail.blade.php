@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row product_d_price">
                 <div class="col-lg-6">
-                    <div class="product_img"><img class="img-fluid" src="{{ asset('storage/'.substr($product->image_product,7)) }}" alt=""></div>
+                    <div class="product_img"><img class="img-fluid" src="{{$product->getImage()}}" alt=""></div>
                 </div>
                 <div class="col-lg-6">
                     <div class="product_details_text">
@@ -62,7 +62,7 @@
                     <div class="cake_feature_item">
                         <a href="{{ route('product-detail',$cakeBaker->id) }}">
                             <div class="cake_img">
-                                <img src="{{ asset('storage/'.substr($cakeBaker->image_product,7)) }}" alt="">
+                                <img src="{{ $cakeBaker->getImage() }}" alt="">
                             </div>
                         </a>
                         <div class="cake_text">

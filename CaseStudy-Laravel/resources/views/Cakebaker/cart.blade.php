@@ -31,7 +31,7 @@
                     <tbody>
                     <tr>
                         <td>
-                            <img src="{{ asset('storage/'.substr($item['productInfo']->image_product,7)) }}" alt="" height="50px" width="70px">
+                            <img src="{{ $item->getImage() }}" alt="" height="50px" width="70px">
                         </td>
                         <td>{{ $item['productInfo']->name }}</td>
                         <td>{{ number_format($item['productInfo']->price) }}đ</td>

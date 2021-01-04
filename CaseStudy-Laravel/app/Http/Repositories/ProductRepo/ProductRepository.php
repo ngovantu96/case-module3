@@ -6,6 +6,7 @@ use App\Http\Repositories\BaseRepository;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Cache\Repository;
+use Illuminate\Support\Facades\Storage;
 
 class ProductRepository extends BaseRepository implements ProductRepositoryInterface
 {
@@ -22,10 +23,10 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
         $this->model->size = $request->size;
         $this->model->category_id = $request->brand;
 
-        $image = $request->image->store('public/product');
+        $image = Storage::disk('s3')->put('images',$request->image,'public');
         $this->model->image_product = $image;
 
-        $image_detail = $request->image_detail->store('public/product');
+        $image_detail = Storage::disk('s3')->put('images',$request->image_detail,'public');
         $this->model->image_detail = $image_detail;
 
 
@@ -47,10 +48,10 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
         $obj->size = $request->size;
         $obj->category_id = $request->brand;
 
-        $image = $request->image->store('public/product');
+        $image = Storage::disk('s3')->put('images',$request->image,'public');
         $obj->image_product = $image;
 
-        $image_detail = $request->image_detail->store('public/product');
+        $image_detail = Storage::disk('s3')->put('images',$request->image_detail,'public');
         $obj->image_detail = $image_detail;
 
         $this->model->save();

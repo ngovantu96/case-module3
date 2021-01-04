@@ -1,7 +1,7 @@
 @extends('Cakebaker.layout.master')
 @section('page-title','trang chu')
 @section('content')
-   
+
 
     <!--================End Main Header Area =================-->
     <section class="banner_area">
@@ -15,7 +15,7 @@
     <!--================Blog Main Area =================-->
     <section class="our_cakes_area p_100">
         <div class="container">
-        
+
         @if(count($results) > 0)
             <div class="main_title">
                 <h2>Sản Phẩm Mà Bạn Muốn Tìm</h2>
@@ -26,7 +26,7 @@
                     <div class="cake_feature_item">
                         <a href="{{ route('product-detail',$result->id) }}">
                             <div class="cake_img">
-                                <img src="{{ asset('storage/'.substr($result->image_product,7)) }}" alt="">
+                                <img src="{{ $results->getImage() }}" alt="">
                             </div>
                         </a>
                         <div class="cake_text">
@@ -46,5 +46,5 @@
         @endif
     </section>
     <!--================End Blog Main Area =================-->
-    
+
 @endsection

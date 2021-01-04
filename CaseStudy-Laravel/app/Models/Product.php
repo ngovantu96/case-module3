@@ -18,6 +18,12 @@ class Product extends Model
         return $this->belongsToMany(Order::class,'order_details','product_id','order_id')
             ->withPivot(['quantity','price','total']);
     }
+    function getImage(){
+        return "https://tungoc8.s3.amazonaws.com/".$this->image_product;
+    }
+    function getImageDetail(){
+        return "https://tungoc8.s3.amazonaws.com/".$this->image_detail;
+    }
 
 
 }
