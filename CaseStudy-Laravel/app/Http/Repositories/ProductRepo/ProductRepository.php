@@ -54,7 +54,7 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
         $image_detail = Storage::disk('s3')->put('images',$request->image_detail,'public');
         $obj->image_detail = $image_detail;
 
-        $this->model->save();
+        $obj->save();
     }
 
     public function getProductNew(){
@@ -64,17 +64,17 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
 
 
     public function getCakeBaker(){
-        $cakeBakers = $this->model->where('category_id','=',4)->get();
+        $cakeBakers = $this->model->where('category_id','=',1)->get();
         return $cakeBakers;
 
     }
 
     public function getBirthDay(){
-        $cakeBirthDays = $this->model->where('category_id','=','5')->get();
+        $cakeBirthDays = $this->model->where('category_id','=','2')->get();
         return $cakeBirthDays;
     }
     public function getChopped(){
-        $cakeCoppeds = $this->model->where('category_id','=','6')->get();
+        $cakeCoppeds = $this->model->where('category_id','=','3')->get();
         return $cakeCoppeds;
     }
 

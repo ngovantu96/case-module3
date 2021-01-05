@@ -25,7 +25,7 @@
                         <h5>Tình Trạng : <span class="text-success">{{($product->quantity > 0) ? 'Còn Hàng' : 'Tạm Thời Hết Hàng' }}</span></h5>
 {{--                        <p>Kích Thước Bánh : {{ $product->size }} g</p>--}}
                         <h5>Giá : <span>{{ number_format($product->price) }} đ</span></h5>
-                        <a class="pink_more" href="#">Thêm vào giỏ</a>
+                        <a class="pink_more" href="{{ route('add.cart',$product->id) }}">Thêm vào giỏ</a>
                     </div>
                 </div>
             </div>
@@ -62,13 +62,13 @@
                     <div class="cake_feature_item">
                         <a href="{{ route('product-detail',$cakeBaker->id) }}">
                             <div class="cake_img">
-                                <img src="{{ $cakeBaker->getImage() }}" alt="">
+                                <img src="{{ $cakeBaker->getImage() }}" alt="" width="253px" height="200px">
                             </div>
                         </a>
                         <div class="cake_text">
                             <h4>{{ number_format($cakeBaker->price) }}đ</h4>
                             <h3>{{ $cakeBaker->name }}</h3>
-                            <a class="pest_btn" href="#">Thêm vào giỏ</a>
+                            <a class="pest_btn" href="{{ route('add.cart',$cakeBaker->id) }}">Thêm vào giỏ</a>
                         </div>
                     </div>
                 </div>

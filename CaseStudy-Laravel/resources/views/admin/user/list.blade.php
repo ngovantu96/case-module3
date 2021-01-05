@@ -45,13 +45,13 @@
                                 <th>Tên Đăng Nhập</th>
                                 <th>Số Điện Thoại</th>
                                 <th>Email</th>
-                                <th>Chức Vụ</th>
+                               <th>Chức Vụ</th>
                                 <th>Trạng Thái</th>
                                 <th></th>
                             </tr>
                             </thead>
                             <tbody>
-                            @if(count($users) == 0)
+                            @if(!isset($users))
                                 <tr><td colspan="4">Không có dữ liệu</td></tr>
                             @else
                                 @foreach($users as $key => $user)
@@ -61,7 +61,7 @@
                                         <td>{{ $user->username }}</td>
                                         <td>{{ $user->phone }}</td>
                                         <td>{{ $user->email }}</td>
-                                        <td>{{  $user->role->name }}</td>
+                                       <td>{{  $user->role->name }}</td>
                                         <td>
                                             <span class="badge {{ $user->Badge() }}">
                                             {{ $user->status() }}

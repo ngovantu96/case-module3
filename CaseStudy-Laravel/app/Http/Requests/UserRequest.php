@@ -27,7 +27,7 @@ class UserRequest extends FormRequest
             'name'=>'required',
             'username'=>'required',
             'email'=>'required|email|unique:users,email',
-            'phone'=>'required|min:10',
+            'phone'=>'required|size:10',
             'password'=>'required|min:6|max:30',
             'address'=>'required',
         ];
@@ -40,7 +40,7 @@ class UserRequest extends FormRequest
             'email.required'=>'trường này không được để trống.',
             'email.unique'=>'email này đã tồn tại.',
             'phone.required'=>'trường này không được bỏ trống.',
-            'phone.min'=>'số điện thoại không hợp lệ.',
+            'phone.size'=>'số điện thoại không hợp lệ.',
             'password.required'=>'trường này không được để trống.',
             'password.min'=>'mật khẩu của bạn quá ngắn, 6-30 kí tự.',
             'password.max'=>'mật khẩu của bạn có tối đa 30 kí tự.',

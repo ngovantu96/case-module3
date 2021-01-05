@@ -21,8 +21,7 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
         $this->model->phone = $request->phone;
         $this->model->address = $request->address;
         $this->model->image = $request->image;
-        $this->model->role_id = $request->role;
-
+        // $this->model->role_id = $request->role;
         $this->model->save();
     }
     public function update($request, $obj){
@@ -34,6 +33,7 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
         $obj->address = $request->address;
         $obj->image = $request->image;
         $obj->role_id = $request->role;
+
 
         $obj->save();
     }

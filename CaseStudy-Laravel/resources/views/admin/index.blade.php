@@ -88,7 +88,7 @@
                         <!-- small box -->
                         <div class="small-box bg-warning">
                             <div class="inner">
-                                <h3>{{$customers->count()}}</h3>
+{{--                                <h3>{{$customers->count()}}</h3>--}}
 
                                 <p>Khách Hàng</p>
                             </div>

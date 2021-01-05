@@ -25,7 +25,7 @@
                             <div class="col-12 col-md-12">
                                 <div class="row">
                                     <div class="col-12">
-                                        <form method="post" action="{{ route('product.store') }}"  enctype="multipart/form-data">
+                                        <form method="post" action="{{ route('product.update',$product->id) }}"  enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">
                                                 <div class="col-6">
@@ -47,13 +47,15 @@
                                                     <div class="form-group">
                                                         <label for="image">Ảnh Sản Phẩm</label>
                                                         <input type="file" class="form-control" name="image" >
-                                                        @error('image_product')
+                                                        <img src="{{ $product->getImage() }}" alt="" width="100px" height="150px">
+                                                        @error('image')
                                                         <p class="text-danger">{{ $message }}</p>
                                                         @enderror
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="image">Ảnh Chi Tiết </label>
-                                                        <input type="file" class="form-control" name="image_detail" >
+                                                        <input type="file" class="form-control" name="image_detail">
+                                                        <img src="{{ $product->getImageDetail() }}"  alt="" width="100px" height="150px">
                                                         @error('image_detail')
                                                         <p class="text-danger">{{ $message }}</p>
                                                         @enderror
@@ -70,7 +72,7 @@
                                                     <div class="form-group">
                                                         <label for="cost_price">Giá Nhập Vào</label>
                                                         <input type="text" class="form-control" name="cost_price" value="{{ $product->price }}"  >
-                                                        @error('costPrice')
+                                                        @error('cost_price')
                                                         <p class="text-center">{{ $message }}</p>
                                                         @enderror
                                                     </div>
@@ -91,7 +93,7 @@
                                                 <label>Mô Tả</label>
                                                 <textarea class="ckeditor" id="ckeditor" name="description">{!! $product->description !!}</textarea>
                                             </div>
-                                            <button type="submit" class="btn btn-primary">Thêm Mới</button>
+                                            <button type="submit" class="btn btn-primary">Cập Nhật</button>
                                         </form>
                                     </div>
                                 </div>

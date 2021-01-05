@@ -230,19 +230,19 @@
                     <div class="col-lg-6">
                         <div class="discover_item_inner">
                             <div class="discover_item">
-                                <h4>Bánh Cupcake-01</h4>
+                                <h4>Bánh Cupcake Dâu Tây</h4>
                                 <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>20,000đ</span></p>
                             </div>
                             <div class="discover_item">
-                                <h4>Bánh Cupcake-02</h4>
+                                <h4>Bánh Cupcake Vị Sữa</h4>
                                 <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>20,000đ</span></p>
                             </div>
                             <div class="discover_item">
-                                <h4>Bánh Cupcake-03</h4>
+                                <h4>Bánh Cupcake Kem Sữa</h4>
                                 <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>20,000đ</span></p>
                             </div>
                             <div class="discover_item">
-                                <h4>Bánh Cupcake-04</h4>
+                                <h4>Bánh Cupcake Vị Socola</h4>
                                 <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>20,000đ</span></p>
                             </div>
                         </div>
@@ -250,11 +250,11 @@
                     <div class="col-lg-6">
                         <div class="discover_item_inner">
                             <div class="discover_item">
-                                <h4>Bánh Cupcake-05</h4>
+                                <h4>Bánh Cupcake Sầu Riêng</h4>
                                 <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>20,000đ</span></p>
                             </div>
                             <div class="discover_item">
-                                <h4>Bánh Cupcake-06</h4>
+                                <h4>Bánh Cupcake </h4>
                                 <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>20,000đ</span></p>
                             </div>
                             <div class="discover_item">

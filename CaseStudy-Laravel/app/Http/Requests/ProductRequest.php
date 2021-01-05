@@ -28,7 +28,7 @@ class ProductRequest extends FormRequest
             'cost_price'=>'required|min:1|numeric',
             'price'=>'required|min:1|numeric',
             'quantity'=>'required|min:1|numeric',
-            'image'=>'mimes:jpeg,jpg,png|required|max:10000',
+            'image'=>'required|mimes:jpeg,jpg,png|required|max:10000',
             'image_detail'=>'mimes:jpeg,jpg,png|max:10000',
             'size'=>'numeric',
         ];

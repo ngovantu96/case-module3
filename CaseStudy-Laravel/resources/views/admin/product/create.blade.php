@@ -47,7 +47,7 @@
                                                   <div class="form-group">
                                                       <label for="image">Ảnh Sản Phẩm</label>
                                                       <input type="file" class="form-control" name="image" >
-                                                      @error('image_product')
+                                                      @error('image')
                                                       <p class="text-danger">{{ $message }}</p>
                                                       @enderror
                                                   </div>
@@ -70,7 +70,7 @@
                                                   <div class="form-group">
                                                       <label for="cost_price">Giá Nhập Vào</label>
                                                       <input type="text" class="form-control" name="cost_price"   >
-                                                      @error('costPrice')
+                                                      @error('cost_price')
                                                       <p class="text-danger">{{ $message }}</p>
                                                       @enderror
                                                   </div>

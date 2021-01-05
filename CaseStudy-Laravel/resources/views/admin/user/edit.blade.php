@@ -87,7 +87,7 @@
 
                                                 </div>
                                             </div>
-                                            <button type="submit" class="btn btn-primary">Thêm Mới</button>
+                                            <button type="submit" class="btn btn-primary">Cập Nhật</button>
                                         </form>
                                     </div>
                                 </div>
