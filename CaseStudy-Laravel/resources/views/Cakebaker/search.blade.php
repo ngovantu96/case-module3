@@ -1,5 +1,5 @@
 @extends('Cakebaker.layout.master')
-@section('page-title','trang chu')
+@section('page-title','kết-quả-tìm-kiếm')
 @section('content')
 
 

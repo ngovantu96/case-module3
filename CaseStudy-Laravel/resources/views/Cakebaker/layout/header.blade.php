@@ -4,17 +4,15 @@
         <div class="container">
             <div class="float-left">
                 <a href="tell:+18004567890"><i class="fas fa-phone-square-alt"></i> + (1800) 456 7890</a>
-                <a href="mainto:cakebaker@gmail.com"><i class="far fa-envelope" aria-hidden="true"></i>cakebakery@gamil.com</a>
+                <a href="mainto:cakebaker@gmail.com"><i class="far fa-envelope" aria-hidden="true"></i>cakebaker@gmail.com</a>
             </div>
             <div class="float-right">
                 <ul class="h_social list_style">
                     <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
                 <ul class="h_search list_style">
-                    <li class="shop_cart"><a href="{{ route('show.cart') }}"><i class="fas fa-cart-plus"></i></a><span class="qty-cart text-center">{{ session('Cart') ? session('Cart')->totalQuanty :  " " }}</span></li>
+                    <li class="shop_cart"><a href="{{ route('show.cart') }}"><i class="fas fa-cart-plus"></i></a><span class="qty-cart text-center">{{ session('Cart') ? session('Cart')->totalQuanty :  0 }}</span></li>
                     <li><a class="popup-with-zoom-anim" href="#test-search"><i class="fas fa-search"></i></a></li>
                 </ul>
             </div>
@@ -37,7 +35,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="active"><a  href="{{ route('home') }}" >Trang Chủ</a></li>
-                        <li><a href="cake.html">Giới Thiệu</a></li>
+                        <li><a href="#">Giới Thiệu</a></li>
                         <li class="dropdown submenu">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sản Phẩm</a>
                             <ul class="dropdown-menu">
@@ -77,7 +75,7 @@
                         <li class="dropdown submenu">
                             <a  href="{{ route('shop') }}">Shop</a>
                         </li>
-                        <li><a href="">Liên Hệ</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
                     </ul>
                 </div>
             </nav>

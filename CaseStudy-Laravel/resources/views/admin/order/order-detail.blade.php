@@ -33,7 +33,24 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6 col-md-12">
+                <div class="card card-primary">
+                    <div class="col-lg-12 col-md-12">
+                    <div class="card-header">
+                        <h3 class="card-title">Thông Tin Khách Hàng</h3>
+                    </div>
+                        <div class="card-body">
+                            @foreach($orders as $order)
+                            <p>Họ Và Tên : {{ $order->customer->name }}</p>
+                            <p>Địa Chỉ  : {{ $order->customer->address }}</p>
+                            <p>Email : {{ $order->customer->email }}</p>
+                            <p>Số Điện Thoại : {{ $order->customer->phone }}</p>
+                            @endforeach
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+
+                {{-- <div class="col-lg-6 col-md-12">
                     <h3>Thông Tin Khách Hàng</h3>
                     @foreach($orders as $order)
                     <p>Họ Và Tên : {{ $order->customer->name }}</p>
@@ -48,15 +65,15 @@
                   @foreach($orderDetails as $orderDetail)
                     <p>Tên Sản Phẩm : {{ $orderDetail->name }}</p>
                     <p>Số lượng : {{ $orderDetail->quantity }}</p>
-                    <p>Giá sản phẩm: {{ number_format($orderDetail->price) }}</p>
+                    <p>Giá sản phẩm: {{ number_format($orderDetail->price_each) }}</p>
                     <p>Tổng tiền : {{ number_format($orderDetail->total) }}</p>
                     @endforeach
-                </div>
+                </div> --}}
                     <!-- /.card -->
                     <!-- /.card -->
-                </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-12">
+
+        <div class="card card-primary">
+            <div class="col-lg-12 col-md-12">
                     <h3>Gửi Mail Cho Khách Hàng</h3>
                     <form action="{{ route('send-mail') }}" method="post">
                         @csrf
@@ -95,9 +112,28 @@
                     </form>
                 </div>
             </div>
+            </div>
                 <!-- /.col -->
             </div>
             <!-- /.row -->
+            <div class="row ml-2    ">
+                <div class="card card-primary">
+                    <div class="col-lg-12 col-md-12">
+                    <div class="card-header">
+                        <h3 class="card-title text-bold">Chi Tiết Đơn Hàng</h3>
+                    </div>
+                        <div class="card-body">
+                            @foreach($orderDetails as $orderDetail)
+                              <p>Tên Sản Phẩm : {{ $orderDetail->name }}</p>
+                              <p>Số lượng : {{ $orderDetail->quantity }}</p>
+                              <p>Giá sản phẩm: {{ number_format($orderDetail->price_each) }}</p>
+                              <p>Thành tiền : {{ number_format($orderDetail->total) }}</p>
+                              @endforeach
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+
         </div>
         <!-- /.container-fluid -->
     </section>

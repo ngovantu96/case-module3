@@ -1,5 +1,5 @@
 @extends('Cakebaker.layout.master')
-@section('page-title','trang chu')
+@section('page-title','trang-chu')
 @section('content')
     <!--================Slider Area =================-->
     <section class="main_slider_area">

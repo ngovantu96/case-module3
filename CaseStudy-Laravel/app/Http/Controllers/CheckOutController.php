@@ -25,14 +25,17 @@ class CheckOutController extends Controller
 
         $customer->save();
 
+
+
         $order = new Order();
         $order->customer_id = $customer->id;
         $order->note = $request->note;
         $order->save();
-
+        // $order->sub_total = $request->sub_total;
         $order_id = $order->id;
         $oldCart = session('Cart') ? session('Cart') : null;
         $cart = new Cart($oldCart);
+
         foreach ($cart->products as $item)
         {
             $product_id = $item['productInfo']->id;
@@ -42,9 +45,12 @@ class CheckOutController extends Controller
                 'order_id' => $order_id,
                 'product_id'=>$product_id,
                 'quantity' => $quantity,
-                'price' => $price,
+                'price_each' => $price,
                 'total' => $price*$quantity,
             ]);
+            // DB::table('order')->insert([
+            //     'sub_total'=>
+            // ])
         }
         session()->forget('Cart');
         return redirect()->route('home')->with('add','Đặt Hàng Thành Công.!!!');

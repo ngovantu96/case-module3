@@ -1,5 +1,5 @@
 @extends('Cakebaker.layout.master')
-@section('page-title','trang chu')
+@section('page-title','chi-tiết-sản-phẩm')
 @section('content')
 
     <!--================End Main Header Area =================-->

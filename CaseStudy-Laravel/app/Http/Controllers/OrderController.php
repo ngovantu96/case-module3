@@ -19,7 +19,7 @@ class OrderController extends Controller
         $orders =  Order::where('id',$id)->get();
        $orderDetails = DB::table('order_details')
            ->join('products','products.id','=','order_details.product_id')
-           ->select('order_details.quantity','order_details.price','order_details.total','products.name')
+           ->select('order_details.quantity','order_details.price_each','order_details.total','products.name')
            ->where('order_details.order_id',$id)
            ->get();
         return view('admin.order.order-detail',compact('orders','orderDetails'));

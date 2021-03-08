@@ -1,8 +1,8 @@
 @extends('Cakebaker.layout.master')
-@section('page-title','trang chu')
+@section('page-title','shop')
 @section('content')
 
-   
+
   <!--================End Main Header Area =================-->
   <section class="banner_area">
         	<div class="container">
@@ -12,14 +12,14 @@
         	</div>
         </section>
         <!--================End Main Header Area =================-->
-        
+
         <!--================Product Area =================-->
         <section class="product_area p_100">
         	<div class="container">
         		<div class="row product_inner_row">
         			<div class="col-lg-9">
-        				<div class="row m0 product_task_bar"> 
-							<div class="product_task_inner"> 
+        				<div class="row m0 product_task_bar">
+							<div class="product_task_inner">
 								<div class="float-left">
 									<a class="active" href="#"><i class="fa fa-th-large" aria-hidden="true"></i></a>
 									<a href="#"><i class="fa fa-th-list" aria-hidden="true"></i></a>
